@@ -26,6 +26,8 @@ def solution_exists(N, setList):
 
 
 def solve(N):
+    global n
+    n = 0
     setList = problem(N, seed=42)
     logging.debug(f"N={N} lists={setList}")
     setList = [
@@ -70,5 +72,5 @@ def setCover(setList, target):
 
 if __name__ == "__main__":
     logging.getLogger().setLevel(logging.DEBUG)
-    for N in [5, 10, 20, 22]:
+    for N in [5, 10, 20]:
         solve(N)
