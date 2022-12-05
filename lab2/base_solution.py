@@ -112,7 +112,9 @@ def mutation(g, GOAL, all_lists, MULTIPLE_MUTATIONS_RATE):
     mutated_g = g.copy()
     logger.debug(f"old genome:{mutated_g}")
     while set(flatten(mutated_g)) == GOAL:
-        el = random.sample(mutated_g, 1)[0]  # Take 1 sample element from the tmp set
+        el = random.sample(mutated_g, 1)[
+            0
+        ]  # Take 1 sample element from the original set
         logger.debug(f"removing {el}")
         mutated_g.remove(el)
     remainders = set(all_lists).difference(g)
