@@ -134,7 +134,7 @@ def minmax_montecarlo_s(state: Nim) -> Nimply:
     """
     # MoveEvaluation = namedtuple("MoveEvaluation", ["evaluation", "row_content", "num_objects"])
 
-    (_, row_content, num_objects), pruned, level = minmax_rec(
+    (_, row_content, num_objects), (pruned, level) = minmax_rec(
         state=state,
         maximize=True,
         level=0,
