@@ -1,7 +1,6 @@
 import cProfile as profile
 import pstats
 import time
-from itertools import product
 
 from Utilities import function_name
 from lab3.Evolution_strategies_2 import (
@@ -31,7 +30,6 @@ if __name__ == "__main__":
     logger.info(logger_line)
 
     # Full tournament
-    matches = list(product(strategies, repeat=2))
     for s in strategies:
         fitness(s)
 
